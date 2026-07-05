@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Briefing Estratégico — Restaurante Bocão</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-red: #7A0C19;
+      --dark-red: #5C0710;
+    }
+    .bg-primary-red { background-color: var(--primary-red); }
+    .text-primary-red { color: var(--primary-red); }
+    .border-primary-red { border-color: var(--primary-red); }
+    .hover-bg-dark-red:hover { background-color: var(--dark-red); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col justify-between">
+
+  <!-- Header -->
+  <header class="bg-primary-red text-white shadow-md py-6 px-4">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div>
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tight">RESTAURANTE BOCÃO</h1>
+        <p class="text-sm text-red-100 mt-1">Briefing Estratégico de Marca & Posicionamento</p>
+      </div>
+      <div class="bg-white text-primary-red px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider shadow">
+        Formulário Oficial
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl w-full mx-auto my-8 px-4 flex-grow">
+    <form id="briefingForm" class="bg-white rounded-lg shadow-md p-6 md:p-8 space-y-8">
+      
+      <!-- Informações Iniciais -->
+      <div class="border-b border-gray-200 pb-6">
+        <h2 class="text-xl font-bold text-primary-red mb-4">Informações de Identificação</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1" for="responsavel">Nome do Responsável pelo Preenchimento *</label>
+            <input type="text" id="responsavel" name="responsavel" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-700">
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1" for="cargo">Cargo / Função *</label>
+            <input type="text" id="cargo" name="cargo" required class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-700">
+          </div>
+        </div>
+      </div>
+
+      <!-- 1. História da Marca -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">1. História da Marca</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">1. Como surgiu o Bocão?</label>
+          <textarea name="q1" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">2. Qual foi a motivação para abrir o restaurante?</label>
+          <textarea name="q2" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">3. Qual foi o maior desafio desde a abertura?</label>
+          <textarea name="q3" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">4. Existe alguma história marcante que todo cliente deveria conhecer?</label>
+          <textarea name="q4" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 2. Identidade -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">2. Identidade</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">5. Se o Bocão fosse uma pessoa, como ela seria? <span class="text-gray-400 text-xs">(Ex: simples, divertida, acolhedora, tradicional, sofisticada...)</span></label>
+          <textarea name="q5" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">6. Quais três palavras melhor definem o Bocão?</label>
+          <input type="text" name="q6" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">7. O que vocês nunca querem que um cliente pense sobre o restaurante?</label>
+          <textarea name="q7" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">8. O que vocês gostariam que todo cliente comentasse ao sair daqui?</label>
+          <textarea name="q8" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 3. Propósito -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">3. Propósito</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">9. Além de servir comida, qual é a missão do Bocão?</label>
+          <textarea name="q9" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">10. O que faz vocês levantarem todos os dias para abrir o restaurante?</label>
+          <textarea name="q10" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">11. Qual sentimento vocês querem proporcionar às pessoas?</label>
+          <textarea name="q11" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 4. Diferencial -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">4. Diferencial</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">12. O que faz alguém escolher o Bocão em vez de outro restaurante?</label>
+          <textarea name="q12" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">13. Qual é o maior orgulho de vocês?</label>
+          <textarea name="q13" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">14. Se vocês só pudessem divulgar uma única característica do Bocão, qual seria?</label>
+          <textarea name="q14" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 5. Público -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">5. Público</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">15. Quem é o cliente que mais frequenta o restaurante?</label>
+          <textarea name="q15" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">16. Existe um público que vocês gostariam de atrair mais?</label>
+          <textarea name="q16" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">17. Quais clientes vocês preferem atender? <span class="text-gray-400 text-xs">(Famílias? Empresas? Casais? Turistas?)</span></label>
+          <textarea name="q17" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">18. Em quais dias da semana o movimento é mais forte?</label>
+          <input type="text" name="q18" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700">
+        </div>
+      </div>
+
+      <!-- 6. Experiência -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">6. Experiência</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">19. Como vocês querem que o cliente se sinta quando entra no restaurante?</label>
+          <textarea name="q19" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">20. E como querem que ele se sinta quando vai embora?</label>
+          <textarea name="q20" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">21. Qual é o momento mais marcante da experiência? <span class="text-gray-400 text-xs">(Buffet, chegada do prato, sobremesa...)</span></label>
+          <textarea name="q21" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 7. Cardápio -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">7. Cardápio</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">22. Quais são os cinco pratos que representam o Bocão?</label>
+          <textarea name="q22" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700" placeholder="1. &#10;2. &#10;3. &#10;4. &#10;5."></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">23. Qual prato todo cliente deveria experimentar?</label>
+          <textarea name="q23" rows="2" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">24. Existe algum prato &quot;escondido&quot; que pouca gente conhece?</label>
+          <textarea name="q24" rows="2" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 8. Atendimento -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">8. Atendimento</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">25. Como vocês definem um bom atendimento?</label>
+          <textarea name="q25" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">26. Existe alguma tradição no atendimento da equipe?</label>
+          <textarea name="q26" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 9. Marca -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">9. Marca</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">27. O que vocês NÃO querem transmitir nas redes sociais? <span class="text-gray-400 text-xs">(Ex: restaurante caro, gourmet, moderno demais, popular demais...)</span></label>
+          <textarea name="q27" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 10. Comunicação -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">10. Comunicação</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">28. Como vocês querem que as pessoas descrevam o Bocão?</label>
+          <textarea name="q28" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 11. Concorrência -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">11. Concorrência</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">29. Existe algum restaurante que vocês admiram? <span class="text-gray-400 text-xs">(Pela comida, atendimento ou presença digital)</span></label>
+          <textarea name="q29" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- 12. Futuro -->
+      <div class="space-y-4 pt-4">
+        <h3 class="text-lg font-bold text-primary-red border-b border-red-100 pb-2">12. Futuro</h3>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">30. Onde vocês querem que o Bocão esteja daqui a cinco anos?</label>
+          <textarea name="q30" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700"></textarea>
+        </div>
+      </div>
+
+      <!-- ⭐ Perguntas bônus -->
+      <div class="space-y-4 pt-6 bg-red-50 p-4 rounded-lg border border-red-200">
+        <h3 class="text-xl font-bold text-primary-red flex items-center gap-2">
+          <span>⭐ Perguntas Bônus (As mais importantes)</span>
+        </h3>
+        <p class="text-xs text-red-800 mb-4">Estas respostas fornecem direcionamentos profundos para a comunicação da marca.</p>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B1. Se um cliente pudesse lembrar de apenas uma coisa do Bocão, o que vocês gostariam que fosse?</label>
+          <textarea name="b1" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B2. Qual é a frase que melhor representa o restaurante?</label>
+          <textarea name="b2" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B3. O que vocês acreditam que o Bocão vende além da comida?</label>
+          <textarea name="b3" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B4. Que tipo de cliente vocês NÃO querem atrair?</label>
+          <textarea name="b4" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B5. O que nunca pode mudar no Bocão?</label>
+          <textarea name="b5" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B6. Se amanhã todas as redes sociais desaparecessem, por que os clientes continuariam voltando?</label>
+          <textarea name="b6" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B7. Como vocês querem que uma criança lembre do Bocão daqui a 20 anos?</label>
+          <textarea name="b7" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">B8. Se um cliente trouxesse um amigo pela primeira vez, o que vocês gostariam que esse amigo dissesse ao sair?</label>
+          <textarea name="b8" rows="3" class="w-full border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-red-700 bg-white"></textarea>
+        </div>
+      </div>
+
+      <!-- Submit Section -->
+      <div class="pt-6 border-t border-gray-200 flex flex-col items-center">
+        <button type="submit" id="submitBtn" class="bg-primary-red hover-bg-dark-red text-white font-bold py-3 px-8 rounded-lg shadow-md transition-all duration-150 transform active:scale-95 w-full md:w-auto">
+          Enviar Respostas do Briefing
+        </button>
+        <p id="feedbackMessage" class="mt-4 text-sm font-medium hidden"></p>
+      </div>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 border-t border-gray-200">
+    <p class="text-xs text-gray-500">Restaurante Bocão &copy; Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Firebase Scripts (v10 modular) -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+    // Firebase Config (Fornecido por você)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCET2qWvWIufFYFNR4aXAtXq4f4Zcj5dlA",
+      authDomain: "bokao-11f0f.firebaseapp.com",
+      projectId: "bokao-11f0f",
+      storageBucket: "bokao-11f0f.firebasestorage.app",
+      messagingSenderId: "876497561577",
+      appId: "1:876497561577:web:309ce15c633f8850f44d78",
+      measurementId: "G-L2GJ2HP28E"
+    };
+
+    // Inicialização
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    const form = document.getElementById('briefingForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const feedbackMessage = document.getElementById('feedbackMessage');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Bloquear botão de envio para evitar cliques múltiplos
+      submitBtn.disabled = true;
+      submitBtn.innerText = "Enviando, aguarde...";
+      feedbackMessage.classList.add('hidden');
+
+      // Coleta dados estruturados
+      const formData = new FormData(form);
+      const data = {
+        meta: {
+          responsavel: formData.get('responsavel'),
+          cargo: formData.get('cargo'),
+          dataCriacao: serverTimestamp()
+        },
+        respostas: {
+          q1: formData.get('q1'), q2: formData.get('q2'), q3: formData.get('q3'), q4: formData.get('q4'),
+          q5: formData.get('q5'), q6: formData.get('q6'), q7: formData.get('q7'), q8: formData.get('q8'),
+          q9: formData.get('q9'), q10: formData.get('q10'), q11: formData.get('q11'), q12: formData.get('q12'),
+          q13: formData.get('q13'), q14: formData.get('q14'), q15: formData.get('q15'), q16: formData.get('q16'),
+          q17: formData.get('q17'), q18: formData.get('q18'), q19: formData.get('q19'), q20: formData.get('q20'),
+          q21: formData.get('q21'), q22: formData.get('q22'), q23: formData.get('q23'), q24: formData.get('q24'),
+          q25: formData.get('q25'), q26: formData.get('q26'), q27: formData.get('q27'), q28: formData.get('q28'),
+          q29: formData.get('q29'), q30: formData.get('q30'),
+          b1: formData.get('b1'), b2: formData.get('b2'), b3: formData.get('b3'), b4: formData.get('b4'),
+          b5: formData.get('b5'), b6: formData.get('b6'), b7: formData.get('b7'), b8: formData.get('b8')
+        }
+      };
+
+      try {
+        // Envia para coleção "briefings"
+        await addDoc(collection(db, "briefings"), data);
+        
+        feedbackMessage.innerText = "Formulário enviado com sucesso! Obrigado pelas suas respostas.";
+        feedbackMessage.className = "mt-4 text-sm font-semibold text-green-600 block";
+        form.reset();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (error) {
+        console.error("Erro ao salvar respostas no Firestore: ", error);
+        feedbackMessage.innerText = "Erro ao enviar respostas. Verifique as configurações do banco de dados.";
+        feedbackMessage.className = "mt-4 text-sm font-semibold text-red-600 block";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = "Enviar Respostas do Briefing";
+      }
+    });
+  </script>
+</body>
+</html>
